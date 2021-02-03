@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background:rgb(193, 212, 212);   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+html{
+    font-size: 65%
+}
+.container{
+   text-align: center;
+    font-size:2rem;
+}
+
+.projectname{
+    margin-top: -20rem;
+    margin-bottom: 10rem;
+}
+
+.projectname h1{
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    color: #999;
+    font-weight: 700;
+}
+
+.progress-div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    max-width: 100%;
+    width: 450px;
+    position: relative;
+}
+
+.progress-div::before{
+    content:'' ;
+    background:  #e0e0e0;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    transform: translateY(-50);
+    top: 50%;
+    left: 0;
+    z-index: -1;
+}
+
+.progress{
+    background-color:  #5da4b9;
+    position: absolute;
+    height: 4px;
+    width: 0%;
+    transform: translateY(-50);
+    transition: 0.5s ease;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+}
+.curve{
+    border: 3px solid #e0e0e0;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #999;
+    font-weight: 700;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.curve.active{
+    border-color: #5da4b9;
+}
+
+button{
+    background-color:  #5da4b9;
+    border: 1px solid  #5da4b9;
+    padding: 1rem 3rem ;
+    margin-right: 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    text-transform: capitalize;
+}
+
+button:active{
+    transform: scale(0.98);
+}
+
+button:focus{
+    outline: none;
+}
+
+button:disabled{
+    background-color: #e0e0e0;
+    border-color: #e0e0e0;
+    cursor: not-allowed;
+}
